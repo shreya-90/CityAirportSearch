@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search City View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SearchCityViewController" id="BYZ-38-t0r" customClass="SearchCityViewController" customModule="CityAirportSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGA-kI-XOG">
+                                <rect key="frame" x="0.0" y="-20" width="375" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G23-nr-aMp">
+                                        <rect key="frame" x="15" y="35" width="345" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Qzu-KA-5o2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.21568627450980393" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="G23-nr-aMp" firstAttribute="top" secondItem="uGA-kI-XOG" secondAttribute="top" constant="35" id="5Jo-Ba-wRg"/>
+                                    <constraint firstAttribute="trailing" secondItem="G23-nr-aMp" secondAttribute="trailing" constant="15" id="YLY-cA-rgE"/>
+                                    <constraint firstItem="G23-nr-aMp" firstAttribute="leading" secondItem="uGA-kI-XOG" secondAttribute="leading" constant="15" id="ocp-KM-Mm0"/>
+                                    <constraint firstAttribute="height" constant="120" id="v56-gc-7gr"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9NQ-fN-e3q">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9NQ-fN-e3q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1pz-xO-xny"/>
+                            <constraint firstItem="9NQ-fN-e3q" firstAttribute="top" secondItem="uGA-kI-XOG" secondAttribute="bottom" id="Bq9-x0-C2w"/>
+                            <constraint firstItem="uGA-kI-XOG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Eum-ge-ycb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uGA-kI-XOG" secondAttribute="trailing" id="ORv-7j-hFa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="uGA-kI-XOG" secondAttribute="top" constant="20" id="i4W-fW-KKE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9NQ-fN-e3q" secondAttribute="bottom" id="nEP-26-gvW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9NQ-fN-e3q" secondAttribute="trailing" id="zUi-Va-Ml4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="roundedView" destination="uGA-kI-XOG" id="67m-0Q-qHx"/>
+                        <outlet property="searchTextField" destination="G23-nr-aMp" id="4KE-4m-5Da"/>
+                        <outlet property="tableView" destination="9NQ-fN-e3q" id="3TL-Vd-vE4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+        <!--Airport Details View Controller-->
+        <scene sceneID="bNB-uT-3v4">
+            <objects>
+                <viewController storyboardIdentifier="AirportDetailsViewController" id="Sbv-zk-KeO" customClass="AirportDetailsViewController" customModule="CityAirportSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XyY-3S-kuP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="175" estimatedRowHeight="175" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="rk1-0k-jRe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GAB-Qr-dL8" firstAttribute="bottom" secondItem="rk1-0k-jRe" secondAttribute="bottom" id="Eia-Th-68O"/>
+                            <constraint firstItem="rk1-0k-jRe" firstAttribute="top" secondItem="GAB-Qr-dL8" secondAttribute="top" id="Z5X-B5-KrK"/>
+                            <constraint firstItem="GAB-Qr-dL8" firstAttribute="trailing" secondItem="rk1-0k-jRe" secondAttribute="trailing" id="sha-cG-ZMT"/>
+                            <constraint firstItem="rk1-0k-jRe" firstAttribute="leading" secondItem="GAB-Qr-dL8" secondAttribute="leading" id="uGs-Y1-O8h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GAB-Qr-dL8"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="rk1-0k-jRe" id="J9V-HE-AtS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n7d-zQ-ylq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845.60000000000002" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
